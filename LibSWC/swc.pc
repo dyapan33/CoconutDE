@@ -1,0 +1,14 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=/usr/local/lib
+includedir=/usr/local/include
+datadir=/usr/local/share/swc
+
+Name: swc
+Description: A library for making a simple Wayland compositor
+Version: 0.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -lswc
+
+Requires: wayland-server
+Requires.private: libdrm pixman-1 wld xkbcommon libinput libudev xcb xcb-composite xcb-ewmh xcb-icccm
